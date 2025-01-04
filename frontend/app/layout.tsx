@@ -18,8 +18,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+    // Ensure that title is a string
+    const pageTitle = typeof metadata.title === 'string' ? metadata.title : "Default Title";
   return (
     <html lang="en">
+      <head>
+        <title>{pageTitle}</title>
+        <meta name="description" content={typeof metadata.description === 'string' ? metadata.description : "Default description"} />
+      </head>
       <body
         className={` ${poppins.variable} antialiased`}
       >
