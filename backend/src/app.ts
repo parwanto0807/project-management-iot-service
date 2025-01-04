@@ -1,7 +1,14 @@
-// src/app.ts
 import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
+import { PrismaClient } from '@prisma/client';
+import dotenv from 'dotenv';
+
+// Muat konfigurasi dari file .env.development
+dotenv.config({ path: process.env.dotenv_config_path });
+
+// Buat instance Prisma Client
+const prisma = new PrismaClient();
 
 // Import Routes untuk setiap modul
 import officeRoutes from './modules/management-office/routes/officeRoutes';
@@ -20,7 +27,24 @@ app.use('/api/office', officeRoutes);  // Management Office routes
 app.use('/api/vendor', vendorRoutes);  // Vendor Management routes
 app.use('/api/user', userRoutes);      // End User routes
 
+// Rute contoh untuk menguji koneksi database
+app.get('/api/test', async (req, res) => {
+  try {
+    const users = await prisma.user.findMany();
+    res.json(users);
+  } catch (err) {
+    console.error('Kesalahan saat mengambil data:', err);
+    res.status(500).send('Kesalahan server');
+  }
+});
+
 // Jalankan server
 app.listen(port, () => {
   console.log(`Server berjalan di http://localhost:${port}`);
+});
+
+// Pastikan koneksi Prisma ditutup dengan baik saat server berhenti
+process.on('SIGINT', async () => {
+  await prisma.$disconnect();
+  process.exit();
 });
