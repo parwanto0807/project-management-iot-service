@@ -5,7 +5,7 @@ import { PrismaClient } from '@prisma/client';
 import dotenv from 'dotenv';
 
 // Muat konfigurasi dari file .env.development
-dotenv.config({ path: process.env.dotenv_config_path });
+dotenv.config({ path: '.env.development' });
 
 // Buat instance Prisma Client
 const prisma = new PrismaClient();
@@ -39,8 +39,14 @@ app.get('/api/test', async (req, res) => {
 });
 
 // Jalankan server
-app.listen(port, () => {
-  console.log(`Server berjalan di http://localhost:${port}`);
+app.listen(port, async () => {
+  try {
+    await prisma.$connect();
+    console.log('Berhasil terhubung ke database');
+    console.log(`Server berjalan di http://localhost:${port}`);
+  } catch (err) {
+    console.error('Gagal terhubung ke database:', err);
+  }
 });
 
 // Pastikan koneksi Prisma ditutup dengan baik saat server berhenti
