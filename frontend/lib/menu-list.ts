@@ -85,7 +85,7 @@ export function getMenuList(pathname: string): Group[] {
       menus: [
         {
           href: "/dashboard/logistic",
-          label: "Logistic",
+          label: "LOGISTIC",
           active: pathname.includes("/dashboard/logistic"),
           icon: SquarePen,
           submenus: [
@@ -113,7 +113,7 @@ export function getMenuList(pathname: string): Group[] {
         },
         {
           href: "/dashboard/engineering",
-          label: "Engineering",
+          label: "ENGINEERING",
           active: pathname.includes("/dashboard/engineering"),
           icon: Omega,
           submenus: [
@@ -127,7 +127,7 @@ export function getMenuList(pathname: string): Group[] {
         
         {
           href: "/dashboard/finance",
-          label: "Finance",
+          label: "FINANCE",
           active: pathname.includes("/dashboard/finance"),
           icon: Bookmark,
           submenus: [
