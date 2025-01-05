@@ -3,7 +3,8 @@ import {
   Bookmark,
   SquarePen,
   LayoutGrid,
-  Boxes
+  Boxes, 
+  Omega
 } from "lucide-react";
 import { IconType } from 'react-icons';
 
@@ -114,7 +115,7 @@ export function getMenuList(pathname: string): Group[] {
           href: "/dashboard/engineering",
           label: "Engineering",
           active: pathname.includes("/dashboard/engineering"),
-          icon: SquarePen,
+          icon: Omega,
           submenus: [
             {
               href: "/dashboard/logistic/comissioning",
