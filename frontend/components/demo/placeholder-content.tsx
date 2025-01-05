@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { DollarSign, Users, CreditCard, Activity } from "lucide-react";
+import { CreditCard, Activity, User, LucideBanknote } from "lucide-react";
 import { salesData, overviewChartData } from "@/constants/dummyData";
 import { Avatar, AvatarFallback } from "@radix-ui/react-avatar";
 import initials from "initials";
@@ -42,17 +42,17 @@ export default function DashboardPage() {
               <Card>
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                   <CardTitle className="text-sm font-medium">Total Revenue</CardTitle>
-                  <DollarSign className="size-4 text-muted-foreground" />
+                  <LucideBanknote className="size-4 text-muted-foreground" />
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold">$45,231.89</div>
+                  <div className="text-2xl font-bold">Rp. 2,545,231,089</div>
                   <p className="text-xs text-muted-foreground">+20.1% from last month</p>
                 </CardContent>
               </Card>
               <Card>
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-sm font-medium">Subscriptions</CardTitle>
-                  <Users className="size-4 text-muted-foreground" />
+                  <CardTitle className="text-sm font-medium">Delivery Product</CardTitle>
+                  <User className="size-4 text-muted-foreground" />
                 </CardHeader>
                 <CardContent>
                   <div className="text-2xl font-bold">+2350</div>
@@ -65,18 +65,18 @@ export default function DashboardPage() {
                   <CreditCard className="size-4 text-muted-foreground" />
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold">+12,234</div>
+                  <div className="text-2xl font-bold">+ Rp. 968.045.098</div>
                   <p className="text-xs text-muted-foreground">+19% from last month</p>
                 </CardContent>
               </Card>
               <Card>
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-sm font-medium">Active Now</CardTitle>
+                  <CardTitle className="text-sm font-medium">Active Client Now</CardTitle>
                   <Activity className="size-4 text-muted-foreground" />
                 </CardHeader>
                 <CardContent>
                   <div className="text-2xl font-bold">+573</div>
-                  <p className="text-xs text-muted-foreground">+201 since last hour</p>
+                  <p className="text-xs text-muted-foreground">+201 since last year</p>
                 </CardContent>
               </Card>
             </div>
@@ -94,7 +94,7 @@ export default function DashboardPage() {
                         fontSize={12}
                         tickLine={false}
                         axisLine={false}
-                        tickFormatter={(value) => `$${value}`}
+                        tickFormatter={(value) => `Rp ${value}`}
                       />
                       <Bar dataKey="total" fill="#ff7700" radius={[4, 4, 0, 0]} />
                     </BarChart>

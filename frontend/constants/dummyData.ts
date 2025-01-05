@@ -2,27 +2,27 @@ export const salesData = [
   {
     name: "Olivia Martin",
     email: "olivia.martin@email.com",
-    amount: "+$1,999.00",
+    amount: "+ Rp. 51,999.000",
   },
   {
     name: "Jackson Lee",
     email: "jackson.lee@email.com",
-    amount: "+$39.00",
+    amount: "+ Rp 39.000.000",
   },
   {
     name: "Isabella Nguyen",
     email: "isabella.nguyen@email.com",
-    amount: "+$299.00",
+    amount: "+ Rp 29.900.000",
   },
   {
     name: "William Kim",
     email: "will@email.com",
-    amount: "+$99.00",
+    amount: "+ Rp. 9.900.000",
   },
   {
     name: "Sofia Davis",
     email: "sofia.davis@email.com",
-    amount: "+$39.00",
+    amount: "+ Rp. 39.000.000",
   },
 ];
 
