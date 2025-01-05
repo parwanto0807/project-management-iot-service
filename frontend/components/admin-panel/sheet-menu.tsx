@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { MenuIcon, PanelsTopLeft } from "lucide-react";
+import { MenuIcon } from "lucide-react";
+import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 import { Menu } from "@/components/admin-panel/menu";
@@ -26,8 +27,13 @@ export function SheetMenu() {
             asChild
           >
             <Link href="/dashboard" className="flex items-center gap-2">
-              <PanelsTopLeft className="w-6 h-6 mr-1" />
-              <h1 className="text-sm">Brand</h1>
+                          <Image
+                            src="/Saitec.png"
+                            alt="SAITEC Prima Mandiri"
+                            width={60}
+                            height={40}
+                          />
+              <h1 className="text-sm">SAITEC Prima Mandiri</h1>
             </Link>
           </Button>
         </SheetHeader>
