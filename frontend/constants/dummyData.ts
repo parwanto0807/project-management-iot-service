@@ -1,22 +1,22 @@
 export const salesData = [
   {
-    name: "Olivia Martin",
-    email: "olivia.martin@email.com",
+    name: "Zahra",
+    email: "sales1@saitecmeter.com",
     amount: "+ Rp. 51,999.000",
   },
   {
-    name: "Jackson Lee",
-    email: "jackson.lee@email.com",
+    name: "Ranti",
+    email: "sales2@saitecmeter.com",
     amount: "+ Rp 39.000.000",
   },
   {
-    name: "Isabella Nguyen",
-    email: "isabella.nguyen@email.com",
+    name: "Vira",
+    email: "sales4@saitecmeter.com",
     amount: "+ Rp 29.900.000",
   },
   {
-    name: "William Kim",
-    email: "will@email.com",
+    name: "Bahroddin",
+    email: "bahroddin@email.com",
     amount: "+ Rp. 9.900.000",
   },
   {
